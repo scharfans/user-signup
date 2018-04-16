@@ -1,0 +1,19 @@
+{% extends"basis.html" %}
+    {% block content %}
+        <form action="/welcome" method="POST">
+            <H1>"Signup"</H1>
+            <label>Username
+                <input id="Username" name="user-name" type="text"/>
+            </label>
+            <label>Password
+                <input id="Password" name="pass-word" type="password"/>
+            </label>
+            <label>Verify Password
+                 <input id="Verify Password" name="verify pass-word" type="password"/>
+            </label>
+            <label>Email
+                <input id="Email" name="email" type="text"/>
+            </label>
+            <input type="submit"/>
+        </form>
+    {% end block %}
