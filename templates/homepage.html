@@ -1,19 +1,29 @@
-{% extends"basis.html" %}
+{% extends "basis.html" %}
     {% block content %}
-        <form action="/welcome" method="POST">
-            <H1>"Signup"</H1>
-            <label>Username
-                <input id="Username" name="user-name" type="text"/>
-            </label>
-            <label>Password
-                <input id="Password" name="pass-word" type="password"/>
-            </label>
-            <label>Verify Password
-                 <input id="Verify Password" name="verify pass-word" type="password"/>
-            </label>
-            <label>Email
-                <input id="Email" name="email" type="text"/>
-            </label>
+        <form method="POST">
+            <H1>Signup</H1>
+                <label>Username
+                    <input id="Username" name="user-name" type="text" value='{{username}}' />
+                </label>
+                    {{username_error}}
+                <p>
+                <label>Password
+                    <input id="Password" name="pass-word" type="password"/>
+                </label>
+                    {{password_error}}
+                </p>
+                <p>
+                <label>Verify Password
+                    <input id="Verify Password" name="verify pass-word" type="password"/>
+                </label>
+                {{passwordv_error}}
+                </p>
+                <p></p>
+                <label>Email
+                    <input id="Email" name="email" type="text" value='{{email}}'/>
+                </label>
+                {{email_error}}
+                </p>    
             <input type="submit"/>
         </form>
-    {% end block %}
+    {% endblock %}
